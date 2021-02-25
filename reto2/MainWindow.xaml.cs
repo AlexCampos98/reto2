@@ -33,32 +33,50 @@ namespace reto2
             if(RecogerNumeros())
             {
                 resultado = primerN + segundoN;
-                solucion.Content = resultado.ToString();
+                solucion.Text = resultado.ToString();
             } else
             {
-                solucion.Content = "No puede haber letras y tampoco puede haber ningun espacio vacio.";
+                solucion.Text = "No puede haber letras y tampoco puede haber ningun espacio vacio.";
             }
         }
 
         private void BtnResta(object sender, RoutedEventArgs e)
         {
-            RecogerNumeros();
-            resultado = primerN - segundoN;
-            solucion.Content = resultado.ToString();
+            if (RecogerNumeros())
+            {
+                resultado = primerN - segundoN;
+                solucion.Text = resultado.ToString();
+            }
+            else
+            {
+                solucion.Text = "No puede haber letras y tampoco puede haber ningun espacio vacio.";
+            }
         }
 
         private void BtnMultiplicar(object sender, RoutedEventArgs e)
         {
-            RecogerNumeros();
-            resultado = primerN * segundoN;
-            solucion.Content = resultado.ToString();
+            if (RecogerNumeros())
+            {
+                resultado = primerN * segundoN;
+                solucion.Text = resultado.ToString();
+            }
+            else
+            {
+                solucion.Text = "No puede haber letras y tampoco puede haber ningun espacio vacio.";
+            }
         }
 
         private void BtnDividir(object sender, RoutedEventArgs e)
         {
-            RecogerNumeros();
-            resultado = primerN / segundoN;
-            solucion.Content = resultado.ToString();
+            if (RecogerNumeros())
+            {
+                resultado = primerN / segundoN;
+                solucion.Text = resultado.ToString();
+            }
+            else
+            {
+                solucion.Text = "No puede haber letras y tampoco puede haber ningun espacio vacio.";
+            }
         }
 
         private Boolean RecogerNumeros()

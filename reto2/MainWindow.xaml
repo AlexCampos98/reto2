@@ -5,28 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:reto2"
         mc:Ignorable="d"
-        Title="Reto2Calculadora" Height="450" Width="800">
-    <Grid>
+        Title="Reto2Calculadora" Height="311.334" Width="672">
+    <Grid Margin="0,0,0,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="10"/>
-            <ColumnDefinition Width="760"/>
-            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="150"/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Label FontSize="20" Width="auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1">
+        <Label FontSize="20" Width="auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" HorizontalAlignment="Center">
             Reto 2 Calculadora
         </Label>
 
-        <TextBox x:Name="numero1" FontSize="20" VerticalContentAlignment="Center" TextAlignment="Center" Grid.Row="1" Margin="221.6,53.2,444.2,52" Grid.Column="1"/>
-        <TextBox x:Name="numero2" FontSize="20" VerticalContentAlignment="Center" TextAlignment="Center" Grid.Row="1" Margin="444.6,53.2,221.2,52" Grid.Column="1"/>
-        <Label x:Name="solucion" Content="Resultado" Margin="10,10,0.2,0" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="20"/>
-        <Grid Height="auto" Grid.Row="2" VerticalAlignment="Bottom" Margin="9.6,0,10.2,-35.2" Grid.Column="1">
+        <TextBox x:Name="numero1" FontSize="20" VerticalContentAlignment="Center" TextAlignment="Center" Grid.Row="1" Width="80px" Grid.Column="1" Margin="183,40,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBox x:Name="numero2" FontSize="20" VerticalContentAlignment="Center" TextAlignment="Center" Grid.Row="1" Width="80px" Grid.Column="1" Margin="0,41,195,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <TextBox x:Name="solucion" Grid.Row="2" Background="LightGray" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Top" FontSize="20" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Width="268" Height="29" Margin="183,34,0,-29"/>
+        <Grid Height="51" Grid.Row="2" VerticalAlignment="Bottom" Grid.Column="1" HorizontalAlignment="Left" Width="644" Margin="1,0,0,-103">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -37,8 +36,11 @@
             <Button Click="BtnSuma" Content="Sumar" HorizontalAlignment="Center" Height="51" VerticalAlignment="Top" Width="75" FontSize="20"/>
             <Button Click="BtnResta" Content="Restar" HorizontalAlignment="Center" Height="51" VerticalAlignment="Top" Width="75" FontSize="20" Grid.Column="1"/>
             <Button Click="BtnMultiplicar" Content="Multiplicar" HorizontalAlignment="Center" Height="51" VerticalAlignment="Top" FontSize="20" Width="97" Grid.Column="2"/>
-            <Button Click="BtnDividir" Content="Dividir" HorizontalAlignment="Center" Height="51" VerticalAlignment="Top" Width="75" FontSize="20" Grid.Column="3"/>
+            <Button Click="BtnDividir" Content="Dividir" HorizontalAlignment="Left" Height="51" VerticalAlignment="Top" Width="75" FontSize="20" Grid.Column="3" Margin="43,0,0,0"/>
         </Grid>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="183,19,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Operador 1" VerticalAlignment="Top" Height="16" Width="61"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Right" Margin="0,19,214,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="16" Width="61"><Run Text="Operador "/><Run Text="2"/></TextBlock>
+        <Label Content="Resultado" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Height="auto" Width="71" Margin="183,8,0,0"/>
 
     </Grid>
 </Window>
